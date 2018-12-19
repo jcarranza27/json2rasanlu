@@ -16,7 +16,7 @@ npm install
 
 # Run
 ```
-./json2rasanlu.js sample.json
+./json2rasanlu.js sample-data/timeBot.json
 ```
 
 # Rasa NLU Files
