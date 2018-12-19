@@ -1,0 +1,26 @@
+slots:
+	time:
+		type:text
+	hour:
+		type:text
+	minutes:
+		type:text
+	seconds:
+		type:text
+
+intents:
+	- greet
+	- bye
+	- get_time
+
+intents:
+	- utter_greet
+	- utter_get_time
+	- utter_bye
+	emplates:
+	- utter_greet
+		- Hey! How are you?
+	- utter_get_time
+		- The time is: 
+	- utter_bye
+		- Bye

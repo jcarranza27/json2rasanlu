@@ -1,0 +1,101 @@
+{
+  "bot":
+    {
+      "name":"TimeBot",
+      "version":"1.2",
+      "mainteiner":"ti.jcarranza@gmail.com"
+    },
+  "slots":
+  [
+    {"name": "time", "type": "text"},
+    {"name": "hour", "type": "text"},
+    {"name": "minutes", "type": "text"},
+    {"name": "seconds", "type": "text"}
+  ],
+  "intents":
+  [
+    {
+      "name": "greet",
+      "interpreter": 
+      [
+        "hey","hello","hi","hello there","good morning","good evening","moin","hey there","let's go","hey dude","goodmorning","goodevening","good afternoon"
+      ]
+    },
+    {
+      "name": "bye",
+      "interpreter": 
+      [
+        "cu","good by","cee you later","good night","good afternoon","bye","goodbye","have a nice day","see you around","bye bye","see you later"
+      ]
+    },
+    {
+      "name": "get_time",
+      "interpreter": 
+      [
+        "what time is it","tell me the hour","give me the time","what said your clock","correct"
+      ]
+    }
+  ],
+  "entities": [],
+  "customActions": [],
+  "actions":
+  [
+    {"name": "utter_greet"},
+    {"name": "utter_get_time"},
+    {"name": "utter_bye"}
+  ],
+  "templates":
+  [
+    {
+      "name" :"utter_greet",
+      "text": "Hey! How are you?",
+      "image": "https://i.imgur.com/y9dH2bJ.jpg",
+      "buttons": []
+    },
+    {
+      "name" :"utter_get_time",
+      "text": "The time is: ",
+      "image": "",
+      "buttons":
+      [
+        {"title": "buzz me in 5 minutes", "payload": "buzz5m"},
+        {"title": "buzz me in 1 hour", "payload": "buzz1h"}
+      ]
+    },
+    {
+      "name" :"utter_bye",
+      "text": "Bye",
+      "image": "",
+      "buttons": []
+    }
+  ],
+  "stories":
+  [
+    {
+      "name": "ask time",
+      "story": [
+        {
+          "intent": "greet",
+          "actions":
+          [
+            {"action": "utter_greet"}
+          ]
+        },
+        {
+          "intent": "get_time",
+          "actions":
+          [
+            {"action": "utter_get_time"}
+          ]
+        },
+        {
+          "intent": "bye",
+          "actions":
+          [
+            {"action": "utter_bye"}
+          ]
+        }
+      ]
+    }
+  ]
+}
