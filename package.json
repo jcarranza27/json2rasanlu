@@ -1,0 +1,20 @@
+{
+  "name": "rasa2nlu",
+  "version": "1.0.0",
+  "description": "json2nlu",
+  "main": "json2nlu.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/dev4telco/json2nlu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/dev4telco/json2nlu/issues"
+  },
+  "homepage": "https://gitlab.com/dev4telco/json2nlu#README"
+}
